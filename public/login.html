@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank of Trust - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans bg-cover bg-center bg-no-repeat login-bg">
+    <!-- Navigation -->
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">Bank of Trust</a>
+            <div class="space-x-4">
+                <a href="index.html" class="hover:text-blue-300">Home</a>
+                <a href="services.html" class="hover:text-blue-300">Services</a>
+                <a href="offshore.html" class="hover:text-blue-300">Offshore Banking</a>
+                <a href="about.html" class="hover:text-blue-300">About</a>
+                <a href="join.html" class="hover:text-blue-300">Join Us</a>
+                <a href="login.html" class="hover:text-blue-300">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="min-h-screen flex items-center justify-center py-16 bg-black bg-opacity-50">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-white mb-8 break-words">Welcome to Bank of Trust Global Private Bank</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Login Form -->
+                <div class="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
+                    <h3 class="text-2xl font-semibold text-center mb-6 break-words">Login</h3>
+                    <form id="loginForm"> <!-- Changed to form element for proper submission handling -->
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700 break-words">Case Sensitive Username</label>
+                            <input type="email" id="email" class="mt-1 p-2 w-full border rounded-md" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="block text-sm font-medium text-gray-700 break-words">Case Sensitive Password</label>
+                            <input type="password" id="password" class="mt-1 p-2 w-full border rounded-md" required>
+                        </div>
+                        <button type="submit" id="loginBtn" class="bg-blue-600 text-white px-6 py-3 rounded-full w-full hover:bg-blue-700">Login</button>
+                        <p id="loginMessage" class="mt-4 text-center text-sm break-words"></p>
+                        <div class="mt-4 text-center">
+                            <a href="#" class="text-blue-600 hover:underline text-sm break-words">Forgot Username</a>
+                            <span class="mx-2">|</span>
+                            <a href="#" class="text-blue-600 hover:underline text-sm break-words">Forgot Password</a>
+                        </div>
+                    </form>
+                </div>
+                <!-- Market Insights -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 break-words">Market Insights</h3>
+                    <h4 class="text-xl font-medium mb-2 break-words">Positioning for a Consolidation</h4>
+                    <ul class="list-disc list-inside text-sm break-words">
+                        <li>Risk assets are due for a consolidation, coinciding with a short-term bounce in the US dollar.</li>
+                        <li>After a strong rally, investor positioning in US and European equities, global high yield corporate bonds, Emerging Market equities, and local currency bonds look stretched. Such extreme one-sided positions raise the risk of a short-term reversal.</li>
+                    </ul>
+                    <a href="join.html" class="text-blue-600 hover:underline text-sm break-words">Sign Up</a>
+                </div>
+            </div>
+            <!-- Important Notice -->
+            <div class="mt-8 bg-yellow-100 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+                <h3 class="text-xl font-semibold text-yellow-800 mb-2 break-words">Important Notice</h3>
+                <p class="text-sm text-yellow-800 break-words">Protect your Personal Digital Keys; Beware of Fraudulent Links. Please be aware that there have been multiple reports of scammers, at times impersonating as staff from the bank, targeting customers through emails, voice calls, and messages soliciting your private and confidential information which may potentially lead to fraudulent transactions on your account.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white p-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 break-words">Bank of Trust</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-300 break-words">Online Guide</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words">Security Tips</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words">Fighting Fraud</a></li>
+                        <li><a href="join.html" class="hover:text-blue-300 break-words">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 break-words">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-300 break-words">Online Security</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words">Fighting Financial Crime</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words">Our Suppliers</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words">FAQs</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words">Our Locations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 break-words">Connect With Us</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-300 break-words">Facebook</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words">Instagram</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words">Twitter</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center mt-8 break-words">© Bank of Trust 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
