@@ -37,16 +37,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Dashboard Logic
     const welcomeMessage = document.getElementById('welcomeMessage');
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('mainContent');
     const logoutBtn = document.getElementById('logoutBtn');
     const balanceElement = document.getElementById('balance');
+
     if (welcomeMessage) {
         const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
         if (loggedInUser && loggedInUser.name) {
-            welcomeMessage.textContent = `Hello, ${loggedInUser.name} 👋`;
+            const text = `Hello, ${loggedInUser.name} 👋`;
+            let i = 0;
+
+            function typeWriter() {
+                if (i < text.length) {
+                    welcomeMessage.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 150); // Slow typing
+                }
+            }
+
+            typeWriter();
         } else {
             window.location.href = 'login.html';
         }
     }
+
+    if (menuToggle && sidebar && mainContent) {
+        menuToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('-translate-x-full');
+            sidebar.classList.toggle('translate-x-0');
+            mainContent.classList.toggle('ml-0');
+            mainContent.classList.toggle('ml-56');
+        });
+    }
+
     if (logoutBtn) {
         logoutBtn.addEventListener('click', function() {
             localStorage.removeItem('loggedInUser');

@@ -29,6 +29,8 @@ body {
 /* Sidebar Styles */
 .sidebar {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .sidebar a {
@@ -57,6 +59,19 @@ body {
 canvas {
     width: 100% !important;
     height: 100% !important;
+}
+
+/* Wallet Card */
+.wallet-card {
+    text-align: center;
+}
+
+.wallet-card img {
+    margin-bottom: 1rem;
+}
+
+.wallet-card .flex {
+    justify-content: center;
 }
 
 /* Alert Card */
