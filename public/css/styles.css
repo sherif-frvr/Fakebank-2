@@ -97,3 +97,301 @@ p, span {
 .count-up {
     animation: countUp 2s ease-out forwards;
 }
+
+/* Custom styles for the banking dashboard */
+
+/* Smooth transitions for all elements */
+* {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Dashboard layout */
+.dashboard {
+    min-height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 50%, #1d4ed8 100%);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(16px);
+}
+
+.sidebar .nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.sidebar .nav-link:hover::before {
+    left: 100%;
+}
+
+.sidebar .nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.header {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+/* Balance card animation */
+.balance {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.balance:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Card hover effects */
+.insights,
+.transactions,
+.favorite-transfers {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.insights:hover,
+.transactions:hover,
+.favorite-transfers:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Table styles */
+.transactions table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.transactions th {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.transactions tbody tr {
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.transactions tbody tr:hover {
+    background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+    transform: scale(1.01);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Status badges */
+.transactions .bg-green-100 {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.transactions .bg-red-100 {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Button animations */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+button:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Gradient buttons */
+.bg-gradient-to-r {
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Chart container */
+.chart-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Favorite transfers animations */
+.favorite-transfers .space-y-4 > div {
+    transition: all 0.3s ease;
+}
+
+.favorite-transfers .space-y-4 > div:hover {
+    transform: translateX(4px);
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatar animations */
+.favorite-transfers .bg-gradient-to-br {
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+    .sidebar {
+        z-index: 50;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+    }
+}
+
+/* Loading animations */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Pulse animation for loading states */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Focus states */
+input:focus,
+select:focus,
+button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Dropdown animations */
+.dropdown-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.dropdown-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease;
+}
+
+/* Custom shadows */
+.shadow-custom {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 
+                0 10px 10px -5px rgba(0, 0, 0, 0.04),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Glass morphism effect */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth page transitions */
+.page-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom grid animations */
+.grid > * {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.grid > *:nth-child(1) { animation-delay: 0.1s; }
+.grid > *:nth-child(2) { animation-delay: 0.2s; }
+.grid > *:nth-child(3) { animation-delay: 0.3s; }
+.grid > *:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Print styles */
+@media print {
+    .sidebar,
+    .header button,
+    .no-print {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+    }
+}
