@@ -3,304 +3,567 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank of Trust - Offshore Banking</title>
+    <title>Offshore Banking - Calay Banking</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="font-sans">
     <!-- Navigation -->
-    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-10">
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">Bank of Trust</a>
-            <div class="space-x-4">
-                <a href="index.html" class="hover:text-blue-300">Home</a>
-                <a href="services.html" class="hover:text-blue-300">Services</a>
-                <a href="offshore.html" class="hover:text-blue-300">Offshore Banking</a>
-                <a href="about.html" class="hover:text-blue-300">About</a>
-                <a href="join.html" class="hover:text-blue-300">Join Us</a>
-                <a href="login.html" class="hover:text-blue-300">Login</a>
+            <a href="index.html" class="text-2xl font-bold hover:text-blue-300 transition-colors duration-300">Calay Banking</a>
+            <div class="md:flex md:space-x-6 hidden md:block">
+                <a href="index.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Home
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="services.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Services
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="offshore.html" class="hover:text-blue-300 transition-colors duration-300 relative group text-blue-300">
+                    Offshore Banking
+                    <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-300"></span>
+                </a>
+                <a href="about.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    About
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="join.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Join Us
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="login.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Login
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="menuToggle" class="text-2xl focus:outline-none hover:text-blue-300 transition-colors duration-300">☰</button>
+            </div>
+            <div id="mobileMenu" class="md:hidden absolute top-16 right-4 bg-blue-900 p-4 space-y-2 rounded-lg shadow-xl transition-all duration-300 hidden">
+                <a href="index.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Home</a>
+                <a href="services.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Services</a>
+                <a href="offshore.html" class="block hover:text-blue-300 transition-colors duration-300 py-2 text-blue-300">Offshore Banking</a>
+                <a href="about.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">About</a>
+                <a href="join.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Join Us</a>
+                <a href="login.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Login</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg h-96 flex items-center justify-center text-white">
-        <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-4 break-words">International Banking</h1>
-            <p class="text-xl mb-6 break-words">Now’s the time to invest globally</p>
-            <p class="text-lg mb-6 break-words">The world waits for no one. Grow your wealth globally and connect with the right opportunities, right now.</p>
-            <a href="#open-account" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">Open your account remotely</a>
+    <section class="hero-bg-offshore h-96 flex items-center justify-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-800/70"></div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 break-words animate-fade-in-up">Offshore Banking Solutions</h1>
+            <p class="text-xl mb-6 break-words animate-fade-in-up animation-delay-200">Secure, Private, and Global Financial Services</p>
+            <p class="text-lg mb-8 break-words max-w-3xl mx-auto animate-fade-in-up animation-delay-400">
+                Access world-class offshore banking services designed for international investors and global citizens seeking financial privacy and growth opportunities.
+            </p>
+            <a href="#offshore-services" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-block animate-fade-in-up animation-delay-600">
+                Explore Offshore Services
+            </a>
         </div>
     </section>
 
     <!-- Introduction Section -->
-    <section class="py-16 bg-blue-50">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12 break-words">Connecting you to a world of wealth opportunities</h2>
-            <p class="text-lg mb-6 break-words">With our global network and on-ground insights, our experts will tailor investment strategies just for you.</p>
+    <section class="py-16 bg-blue-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-24 h-24 bg-blue-300 rounded-full"></div>
+            <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-blue-100 rounded-full"></div>
+        </div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 break-words text-gray-800">
+                Why Choose Offshore Banking?
+            </h2>
+            <p class="text-lg mb-6 break-words max-w-4xl mx-auto text-gray-700 leading-relaxed">
+                Offshore banking provides enhanced privacy, asset protection, and access to international investment opportunities. 
+                Our offshore solutions are designed for discerning clients who value financial confidentiality and global reach.
+            </p>
         </div>
     </section>
 
-    <!-- Locations Section -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 break-words">Our Global Presence</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1565118531796-763e5082d113" alt="Singapore" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Singapore</h3>
-                    <p class="text-sm break-words">Significantly rooted foreign bank status awarded by Monetary Authority of Singapore</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Find out more</a>
+    <!-- Offshore Benefits Section -->
+    <section id="offshore-services" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 break-words text-gray-800">
+                Offshore Banking Benefits
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg" alt="Asset Protection" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 break-words text-gray-800">Asset Protection</h3>
+                    <p class="text-sm break-words text-gray-600 leading-relaxed">
+                        Protect your wealth from political and economic instability with secure offshore banking jurisdictions.
+                    </p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1583495038143-6a16e7e479f9" alt="Hong Kong" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Hong Kong</h3>
-                    <p class="text-sm break-words">Awarded Best Retail Bank & Best Wealth Management Bank in 2021 by The Asian Banker</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Find out more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg" alt="Financial Privacy" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 break-words text-gray-800">Enhanced Privacy</h3>
+                    <p class="text-sm break-words text-gray-600 leading-relaxed">
+                        Enjoy strict banking confidentiality laws and enhanced privacy protection for your financial affairs.
+                    </p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090" alt="UAE" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">UAE</h3>
-                    <p class="text-sm break-words">Leading global financial centre serving clients in Middle East, Africa, and South Asia</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Find out more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg" alt="Tax Optimization" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 break-words text-gray-800">Tax Optimization</h3>
+                    <p class="text-sm break-words text-gray-600 leading-relaxed">
+                        Optimize your tax position through legitimate offshore structures and international tax planning.
+                    </p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1592931911833-8f7f6e9b0760" alt="Jersey" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Jersey</h3>
-                    <p class="text-sm break-words">One of the oldest international banking centres, with presence spanning 40 years</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Find out more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg" alt="Currency Diversification" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 break-words text-gray-800">Currency Diversification</h3>
+                    <p class="text-sm break-words text-gray-600 leading-relaxed">
+                        Hold multiple currencies and hedge against currency devaluation with our multi-currency accounts.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg" alt="Global Investment Access" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 break-words text-gray-800">Global Investment Access</h3>
+                    <p class="text-sm break-words text-gray-600 leading-relaxed">
+                        Access international markets and investment opportunities not available in your home country.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/1534560/pexels-photo-1534560.jpeg" alt="Political Stability" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 break-words text-gray-800">Political Stability</h3>
+                    <p class="text-sm break-words text-gray-600 leading-relaxed">
+                        Bank in politically stable jurisdictions with strong rule of law and established financial systems.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="py-16 bg-blue-50">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 break-words">Seamless and Secure International Wealth Management</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 break-words">Diversify Your Investments</h3>
-                    <p class="text-sm break-words">Access global opportunities through our deep on-the-ground understanding of local markets and global reach.</p>
+    <!-- Offshore Jurisdictions Section -->
+    <section class="py-16 bg-blue-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 right-20 w-40 h-40 bg-blue-200 rounded-full"></div>
+            <div class="absolute bottom-20 left-20 w-32 h-32 bg-blue-300 rounded-full"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 break-words text-gray-800">
+                Premier Offshore Banking Jurisdictions
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/2031706/pexels-photo-2031706.jpeg" alt="Singapore Offshore Banking" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Singapore</h3>
+                    <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">
+                        Asia's leading financial hub with robust banking secrecy laws and political stability. Ideal for Asian market exposure.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">
+                        Learn more about Singapore banking →
+                    </a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 break-words">Manage Your Wealth On-the-Go</h3>
-                    <p class="text-sm break-words">Manage your portfolio seamlessly and securely by connecting with your relationship manager anytime, anywhere with myRM.</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/2901209/pexels-photo-2901209.jpeg" alt="Jersey Offshore Banking" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Jersey</h3>
+                    <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">
+                        Crown dependency with 40+ years of offshore banking expertise. Strong regulatory framework and EU market access.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">
+                        Discover Jersey advantages →
+                    </a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 break-words">Fluent in Your Language</h3>
-                    <p class="text-sm break-words">Partner with a team of Wealth Academy-trained relationship managers and local experts who speak your language.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 break-words">Worldwide Priority Status</h3>
-                    <p class="text-sm break-words">Enjoy global Priority recognition and benefits for your accounts across markets.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 break-words">View Accounts in One Place</h3>
-                    <p class="text-sm break-words">Link and view multiple accounts in a single view wherever you are.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 break-words">Access Global Currencies</h3>
-                    <p class="text-sm break-words">Conveniently access funds in more than 10 currencies with a multi-currency account.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 break-words">Free and Fast Transfers</h3>
-                    <p class="text-sm break-words">Transfer internationally with zero charge and lock in competitive FX rates via mobile banking.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 break-words">Open an Account Remotely</h3>
-                    <p class="text-sm break-words">Fast and simple account opening with just an online form from wherever you are.</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/1534560/pexels-photo-1534560.jpeg" alt="UAE Offshore Banking" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">UAE</h3>
+                    <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">
+                        Strategic gateway to Middle East, Africa, and South Asia. Zero personal income tax and modern banking infrastructure.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">
+                        Explore UAE banking →
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Wealth Solutions Section -->
+    <!-- Offshore Services Section -->
     <section class="py-16 bg-gray-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 break-words">We’re Here to Help You Build, Manage, and Protect Your Wealth</h2>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 break-words text-gray-800">
+                Comprehensive Offshore Banking Services
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="International Investments" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Grow Your Wealth Internationally</h3>
-                    <p class="text-sm break-words">Diversify your investments with a wide range of wealth solutions and insights.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Learn more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Private Banking" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Private Banking Services</h3>
+                    <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">
+                        Exclusive private banking services with dedicated relationship managers for high-net-worth individuals.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">
+                        Learn more →
+                    </a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1582268613632-8e4c5e6e3e37" alt="Moving Overseas" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Make Your Overseas Move Easy</h3>
-                    <p class="text-sm break-words">Open an account before you arrive and transfer funds smoothly and securely.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Learn more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/1098460/pexels-photo-1098460.jpeg" alt="Investment Management" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Investment Management</h3>
+                    <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">
+                        Professional portfolio management with access to global markets and alternative investments.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">
+                        Learn more →
+                    </a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="International Mortgages" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Investing in an Overseas Property</h3>
-                    <p class="text-sm break-words">Investing in property overseas is simple with local currency mortgages.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Learn more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg" alt="Corporate Banking" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Corporate Banking</h3>
+                    <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">
+                        Comprehensive corporate banking solutions for international businesses and offshore companies.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">
+                        Learn more →
+                    </a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1554224155-3a58922a22c3" alt="Transfer Money" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Transfer Money Overseas for Free</h3>
-                    <p class="text-sm break-words">Send and receive funds conveniently from anywhere with your multi-currency account.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Learn more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <img src="https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg" alt="Trust Services" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Trust & Fiduciary Services</h3>
+                    <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">
+                        Estate planning, trust administration, and fiduciary services for wealth preservation and succession planning.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">
+                        Learn more →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section class="py-16 bg-blue-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full animate-pulse"></div>
+            <div class="absolute bottom-10 right-10 w-24 h-24 bg-blue-300 rounded-full animate-pulse animation-delay-1000"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 break-words text-gray-800">
+                Offshore Banking Requirements
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 break-words text-gray-800">Minimum Investment</h3>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <span class="break-words">Private Banking: USD 1,000,000 minimum</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <span class="break-words">Premier Banking: USD 250,000 minimum</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <span class="break-words">International Banking: USD 50,000 minimum</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 break-words text-gray-800">Documentation Required</h3>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <span class="break-words">Valid passport and proof of identity</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <span class="break-words">Proof of address and residence</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <span class="break-words">Source of funds documentation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <span class="break-words">Professional references</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Account Opening Form Section -->
-    <section id="open-account" class="py-16 bg-blue-50">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 break-words">Start Your International Wealth Journey Now</h2>
-            <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
-                <p class="text-sm mb-4 break-words">Eligibility criteria for new customers: Invest USD40,000 – USD150,000 in deposits and/or investments. T&C apply.</p>
+    <section id="open-offshore-account" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 break-words text-gray-800">
+                Open Your Offshore Account Today
+            </h2>
+            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-xl">
+                <p class="text-sm mb-6 break-words text-gray-600 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                    Start your offshore banking journey with our secure and confidential account opening process. All information is protected by strict banking secrecy laws.
+                </p>
                 <div id="offshoreForm">
-                    <div class="mb-4">
-                        <label for="fullName" class="block text-sm font-medium text-gray-700 break-words">Full Legal Name</label>
-                        <input type="text" id="fullName" class="mt-1 p-2 w-full border rounded-md" required>
+                    <div class="mb-6">
+                        <label for="fullName" class="block text-sm font-medium text-gray-700 break-words mb-2">Full Legal Name</label>
+                        <input type="text" id="fullName" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300" required>
                     </div>
-                    <div class="mb-4">
-                        <label for="offshoreEmail" class="block text-sm font-medium text-gray-700 break-words">Email</label>
-                        <input type="email" id="offshoreEmail" class="mt-1 p-2 w-full border rounded-md" required>
+                    <div class="mb-6">
+                        <label for="offshoreEmail" class="block text-sm font-medium text-gray-700 break-words mb-2">Email</label>
+                        <input type="email" id="offshoreEmail" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300" required>
                     </div>
-                    <div class="mb-4">
-                        <label for="phone" class="block text-sm font-medium text-gray-700 break-words">Phone</label>
-                        <input type="tel" id="phone" class="mt-1 p-2 w-full border rounded-md" required>
+                    <div class="mb-6">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 break-words mb-2">Phone</label>
+                        <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300" required>
                     </div>
-                    <div class="mb-4">
-                        <label for="residence" class="block text-sm font-medium text-gray-700 break-words">Place of Residence</label>
-                        <input type="text" id="residence" class="mt-1 p-2 w-full border rounded-md" required>
+                    <div class="mb-6">
+                        <label for="nationality" class="block text-sm font-medium text-gray-700 break-words mb-2">Nationality</label>
+                        <input type="text" id="nationality" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300" required>
                     </div>
-                    <div class="mb-4">
-                        <label for="location" class="block text-sm font-medium text-gray-700 break-words">Select Location(s) for Account</label>
-                        <select id="location" class="mt-1 p-2 w-full border rounded-md" multiple required>
+                    <div class="mb-6">
+                        <label for="residence" class="block text-sm font-medium text-gray-700 break-words mb-2">Country of Residence</label>
+                        <input type="text" id="residence" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="jurisdiction" class="block text-sm font-medium text-gray-700 break-words mb-2">Preferred Offshore Jurisdiction</label>
+                        <select id="jurisdiction" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300" required>
+                            <option value="">Select Jurisdiction</option>
                             <option value="Singapore">Singapore</option>
-                            <option value="Hong Kong SAR">Hong Kong SAR</option>
-                            <option value="UAE">UAE</option>
                             <option value="Jersey">Jersey</option>
-                            <option value="Chinese Mainland">Chinese Mainland</option>
-                            <option value="Malaysia">Malaysia</option>
-                            <option value="Taiwan">Taiwan</option>
-                            <option value="Vietnam">Vietnam</option>
-                            <option value="India">India</option>
+                            <option value="UAE">UAE</option>
+                            <option value="Hong Kong SAR">Hong Kong SAR</option>
+                            <option value="Switzerland">Switzerland</option>
                         </select>
                     </div>
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 break-words">Are you currently banking with Bank of Trust?</label>
-                        <div class="mt-2">
-                            <label class="inline-flex items-center">
-                                <input type="radio" name="existingCustomer" value="Yes" class="form-radio" required>
-                                <span class="ml-2 text-sm break-words">Yes</span>
+                    <div class="mb-6">
+                        <label for="investmentAmount" class="block text-sm font-medium text-gray-700 break-words mb-2">Initial Investment Amount (USD)</label>
+                        <select id="investmentAmount" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300" required>
+                            <option value="">Select Amount</option>
+                            <option value="50000-100000">$50,000 - $100,000</option>
+                            <option value="100000-250000">$100,000 - $250,000</option>
+                            <option value="250000-500000">$250,000 - $500,000</option>
+                            <option value="500000-1000000">$500,000 - $1,000,000</option>
+                            <option value="1000000+">$1,000,000+</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 break-words mb-3">Banking Services Required</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services" value="Private Banking" class="mr-3 text-blue-600 focus:ring-blue-500">
+                                <span class="text-sm break-words">Private Banking</span>
                             </label>
-                            <label class="inline-flex items-center ml-6">
-                                <input type="radio" name="existingCustomer" value="No" class="form-radio" required>
-                                <span class="ml-2 text-sm break-words">No</span>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services" value="Investment Management" class="mr-3 text-blue-600 focus:ring-blue-500">
+                                <span class="text-sm break-words">Investment Management</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services" value="Corporate Banking" class="mr-3 text-blue-600 focus:ring-blue-500">
+                                <span class="text-sm break-words">Corporate Banking</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="services" value="Trust Services" class="mr-3 text-blue-600 focus:ring-blue-500">
+                                <span class="text-sm break-words">Trust & Fiduciary Services</span>
                             </label>
                         </div>
                     </div>
-                    <button id="offshoreSubmitBtn" class="bg-blue-600 text-white px-6 py-3 rounded-full w-full hover:bg-blue-700">Submit Application</button>
+                    <button id="offshoreSubmitBtn" class="bg-blue-600 text-white px-6 py-3 rounded-full w-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg font-medium">
+                        Submit Offshore Banking Application
+                    </button>
                     <p id="offshoreFormMessage" class="mt-4 text-center text-sm break-words"></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial Section -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12 break-words">What Do Our Clients Say?</h2>
-            <div class="max-w-3xl mx-auto">
-                <img src="https://images.unsplash.com/photo-1614028674026-a65e31bfd27c" alt="Testimonial Video" class="w-full h-64 object-cover rounded-lg mb-4">
-                <p class="text-sm break-words">Watch this video to see how we connect our International Banking clients with the right opportunities to help grow, manage, and protect their wealth.</p>
-                <a href="#" class="text-blue-600 hover:underline break-words">Watch the video</a>
+    <!-- Compliance Section -->
+    <section class="py-16 bg-blue-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 right-20 w-40 h-40 bg-blue-200 rounded-full"></div>
+            <div class="absolute bottom-20 left-20 w-32 h-32 bg-blue-300 rounded-full"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 break-words text-gray-800">
+                Compliance & Regulatory Excellence
+            </h2>
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-lg mb-8 break-words text-gray-700 leading-relaxed">
+                    Calay Banking maintains the highest standards of compliance and regulatory adherence across all offshore jurisdictions. 
+                    We are committed to transparency, anti-money laundering (AML) protocols, and Know Your Customer (KYC) requirements.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-lg font-semibold mb-3 break-words text-gray-800">AML Compliance</h3>
+                        <p class="text-sm break-words text-gray-600">
+                            Strict anti-money laundering procedures and ongoing transaction monitoring.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-lg font-semibold mb-3 break-words text-gray-800">KYC Standards</h3>
+                        <p class="text-sm break-words text-gray-600">
+                            Comprehensive Know Your Customer verification and due diligence processes.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-lg font-semibold mb-3 break-words text-gray-800">Regulatory Oversight</h3>
+                        <p class="text-sm break-words text-gray-600">
+                            Licensed and regulated by leading financial authorities in each jurisdiction.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Additional Markets Section -->
-    <section class="py-16 bg-blue-50">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 break-words">Possibilities Are Everywhere</h2>
-            <p class="text-lg text-center mb-6 break-words">Connecting you to the world’s most dynamic markets</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1587613991690-97de1c5e989f" alt="India" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">India</h3>
-                    <p class="text-sm break-words">Explore our range of NRI products to suit your requirements, needs, and aspirations.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Find out more</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1568515045053-39111c7688c2" alt="Chinese Mainland" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Chinese Mainland</h3>
-                    <p class="text-sm break-words">Enjoy seamless cross-border RMB remittances, account opening witness service, and global recognition.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Find out more</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f" alt="Malaysia" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Malaysia</h3>
-                    <p class="text-sm break-words">Access a range of diversified wealth solutions globally through our international network.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Find out more</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1571055107559-3e67626fa8be" alt="Taiwan" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Taiwan</h3>
-                    <p class="text-sm break-words">Same-day cross-strait money transfer services and cross-border RMB remittances at reduced rates.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Find out more</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1538331266626-3e8632f54237" alt="Vietnam" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Vietnam</h3>
-                    <p class="text-sm break-words">Enjoy preferential exchange rates at our Priority Banking Centres and Travelex Exchange Desks worldwide.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Find out more</a>
-                </div>
-            </div>
-            <div class="text-center mt-8">
-                <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 break-words">Learn more</a>
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 break-words text-gray-800">
+                Ready to Start Your Offshore Banking Journey?
+            </h2>
+            <p class="text-lg mb-8 break-words max-w-3xl mx-auto text-gray-700 leading-relaxed">
+                Contact our offshore banking specialists to discuss your requirements and explore the best solutions for your international financial needs.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="#open-offshore-account" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                    Open Account Now
+                </a>
+                <a href="join.html" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105">
+                    Contact Specialist
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-900 text-white p-6">
-        <div class="container mx-auto">
+    <footer class="bg-blue-900 text-white p-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-blue-700 rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-24 h-24 bg-blue-800 rounded-full"></div>
+        </div>
+        <div class="container mx-auto relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 break-words">Bank of Trust</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-blue-300 break-words">Accessibility</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Cookie Policy</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Terms of Use</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Modern Slavery Statement</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Regulatory Disclosures</a></li>
+                    <h3 class="text-lg font-semibold mb-4 break-words">Calay Banking</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Accessibility</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Modern Slavery Statement</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Regulatory Disclosures</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4 break-words">Support</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-blue-300 break-words">Online Security</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Fighting Financial Crime</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Our Suppliers</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">FAQs</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Our Locations</a></li>
-                        <li><a href="join.html" class="hover:text-blue-300 break-words">Contact Us</a></li>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Online Security</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Fighting Financial Crime</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Our Suppliers</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">FAQs</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Our Locations</a></li>
+                        <li><a href="join.html" class="hover:text-blue-300 break-words transition-colors duration-300">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4 break-words">Connect With Us</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-blue-300 break-words">Facebook</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Instagram</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Twitter</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">LinkedIn</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">YouTube</a></li>
-                    </ul>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="hover:text-blue-300 transition-colors duration-300 transform hover:scale-110">📘</a>
+                        <a href="#" class="hover:text-blue-300 transition-colors duration-300 transform hover:scale-110">📷</a>
+                        <a href="#" class="hover:text-blue-300 transition-colors duration-300 transform hover:scale-110">🐦</a>
+                        <a href="#" class="hover:text-blue-300 transition-colors duration-300 transform hover:scale-110">💼</a>
+                        <a href="#" class="hover:text-blue-300 transition-colors duration-300 transform hover:scale-110">📺</a>
+                    </div>
                 </div>
             </div>
-            <p class="text-center mt-8 break-words">© Bank of Trust 2004. All Rights Reserved.</p>
+            <div class="border-t border-blue-800 mt-8 pt-8">
+                <p class="text-center break-words text-blue-200">
+                    © Calay Banking 2004. All Rights Reserved.
+                </p>
+            </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Form submission
+            const submitBtn = document.getElementById('offshoreSubmitBtn');
+            const formMessage = document.getElementById('offshoreFormMessage');
+            
+            if (submitBtn && formMessage) {
+                submitBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const fullName = document.getElementById('fullName').value;
+                    const email = document.getElementById('offshoreEmail').value;
+                    const phone = document.getElementById('phone').value;
+                    const nationality = document.getElementById('nationality').value;
+                    const residence = document.getElementById('residence').value;
+                    const jurisdiction = document.getElementById('jurisdiction').value;
+                    const investmentAmount = document.getElementById('investmentAmount').value;
+                    
+                    // Basic validation
+                    if (!fullName || !email || !phone || !nationality || !residence || !jurisdiction || !investmentAmount) {
+                        formMessage.textContent = 'Please fill in all required fields.';
+                        formMessage.className = 'mt-4 text-center text-sm break-words text-red-600 bg-red-50 p-3 rounded-lg';
+                        return;
+                    }
+                    
+                    // Success message
+                    formMessage.textContent = 'Thank you for your offshore banking application! Our specialists will contact you within 24 hours to discuss your requirements.';
+                    formMessage.className = 'mt-4 text-center text-sm break-words text-green-600 bg-green-50 p-3 rounded-lg';
+                    
+                    // Reset form
+                    document.getElementById('offshoreForm').reset();
+                });
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

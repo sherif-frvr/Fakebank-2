@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank of Trust - Home</title>
+    <title>Calay Banking - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -11,14 +11,25 @@
     <!-- Navigation -->
     <nav class="bg-blue-900 text-white p-4 sticky top-0 z-10">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">Bank of Trust</a>
-            <div class="space-x-4">
+            <a href="index.html" class="text-2xl font-bold">Calay Banking</a>
+            <div class="md:flex md:space-x-4 hidden md:block">
                 <a href="index.html" class="hover:text-blue-300">Home</a>
                 <a href="services.html" class="hover:text-blue-300">Services</a>
                 <a href="offshore.html" class="hover:text-blue-300">Offshore Banking</a>
                 <a href="about.html" class="hover:text-blue-300">About</a>
                 <a href="join.html" class="hover:text-blue-300">Join Us</a>
                 <a href="login.html" class="hover:text-blue-300">Login</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menuToggle" class="text-2xl focus:outline-none">☰</button>
+            </div>
+            <div id="mobileMenu" class="md:hidden absolute top-16 right-4 bg-blue-900 p-4 space-y-2 hidden">
+                <a href="index.html" class="block hover:text-blue-300">Home</a>
+                <a href="services.html" class="block hover:text-blue-300">Services</a>
+                <a href="offshore.html" class="block hover:text-blue-300">Offshore Banking</a>
+                <a href="about.html" class="block hover:text-blue-300">About</a>
+                <a href="join.html" class="block hover:text-blue-300">Join Us</a>
+                <a href="login.html" class="block hover:text-blue-300">Login</a>
             </div>
         </div>
     </nav>
@@ -35,7 +46,7 @@
     <!-- Footer -->
     <footer class="bg-blue-900 text-white p-6">
         <div class="container mx-auto text-center">
-            <p>© 2004 Bank of Trust. All rights reserved.</p>
+            <p>© 2004 Calay Banking. All rights reserved.</p>
             <div class="mt-4 space-x-4">
                 <a href="#" class="hover:text-blue-300">Privacy Policy</a>
                 <a href="#" class="hover:text-blue-300">Terms of Service</a>
@@ -44,6 +55,32 @@
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const welcomeText = document.getElementById('welcomeText');
+            if (welcomeText) {
+                const text = "Welcome to Calay Banking ";
+                let i = 0;
+
+                function typeWriter() {
+                    if (i < text.length) {
+                        welcomeText.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 150); // Slow typing
+                    }
+                }
+
+                typeWriter();
+            }
+
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

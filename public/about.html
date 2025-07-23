@@ -3,51 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank of Trust - About</title>
+    <title>Calay Banking - About</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="font-sans">
     <!-- Navigation -->
-    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-10">
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">Bank of Trust</a>
-            <div class="space-x-4">
-                <a href="index.html" class="hover:text-blue-300">Home</a>
-                <a href="services.html" class="hover:text-blue-300">Services</a>
-                <a href="offshore.html" class="hover:text-blue-300">Offshore Banking</a>
-                <a href="about.html" class="hover:text-blue-300">About</a>
-                <a href="join.html" class="hover:text-blue-300">Join Us</a>
-                <a href="login.html" class="hover:text-blue-300">Login</a>
+            <a href="index.html" class="text-2xl font-bold hover:text-blue-300 transition-colors duration-300">Calay Banking</a>
+            <div class="md:flex md:space-x-6 hidden md:block">
+                <a href="index.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Home
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="services.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Services
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="offshore.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Offshore Banking
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="about.html" class="hover:text-blue-300 transition-colors duration-300 relative group text-blue-300">
+                    About
+                    <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-300"></span>
+                </a>
+                <a href="join.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Join Us
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="login.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Login
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="menuToggle" class="text-2xl focus:outline-none hover:text-blue-300 transition-colors duration-300">
+                    <span class="block w-6 h-0.5 bg-white mb-1 transition-all duration-300"></span>
+                    <span class="block w-6 h-0.5 bg-white mb-1 transition-all duration-300"></span>
+                    <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                </button>
+            </div>
+            <div id="mobileMenu" class="md:hidden absolute top-16 right-4 bg-blue-900 p-4 space-y-2 rounded-lg shadow-xl transition-all duration-300 hidden">
+                <a href="index.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Home</a>
+                <a href="services.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Services</a>
+                <a href="offshore.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Offshore Banking</a>
+                <a href="about.html" class="block hover:text-blue-300 transition-colors duration-300 py-2 text-blue-300">About</a>
+                <a href="join.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Join Us</a>
+                <a href="login.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Login</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg h-96 flex items-center justify-center text-white">
-        <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-4 break-words">Sustainability</h1>
-            <p class="text-xl mb-6 break-words">We’re mobilising capital to help deliver sustainable and inclusive growth for the places we call home.</p>
+    <section 
+        class="relative h-96 flex items-center justify-center text-white overflow-hidden"
+        style="
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        "
+    >
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-green-800/70"></div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 break-words animate-fade-in-up">Sustainability</h1>
+            <p class="text-xl mb-6 break-words animate-fade-in-up animation-delay-200">We're mobilising capital to help deliver sustainable and inclusive growth for the places we call home.</p>
         </div>
     </section>
 
     <!-- Sustainability Overview Section -->
-    <section class="py-16 bg-blue-50">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12 break-words">Our Commitment to Sustainability</h2>
-            <p class="text-lg mb-6 break-words">Our market footprint shapes our unique perspective on the opportunities and challenges our clients and communities face as the world shifts to a more sustainable path. This means we are strategically positioned to connect capital to where it’s needed.</p>
+    <section class="py-16 bg-blue-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-green-200 rounded-full animate-pulse"></div>
+            <div class="absolute bottom-10 right-10 w-24 h-24 bg-blue-300 rounded-full animate-pulse animation-delay-1000"></div>
+            <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-green-100 rounded-full animate-pulse animation-delay-500"></div>
+        </div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 break-words text-gray-800">Our Commitment to Sustainability</h2>
+            <p class="text-lg mb-6 break-words max-w-4xl mx-auto text-gray-700 leading-relaxed">Our market footprint shapes our unique perspective on the opportunities and challenges our clients and communities face as the world shifts to a more sustainable path. This means we are strategically positioned to connect capital to where it's needed.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-white text-2xl font-bold">🌱</span>
+                        </div>
+                    </div>
                     <h3 class="text-2xl font-bold text-blue-600 mb-2 break-words">28-42%</h3>
-                    <p class="text-sm break-words">of global emissions must be cut by 2030</p>
+                    <p class="text-sm break-words text-gray-600">of global emissions must be cut by 2030</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-white text-2xl font-bold">📊</span>
+                        </div>
+                    </div>
                     <h3 class="text-2xl font-bold text-blue-600 mb-2 break-words">$376.6bn</h3>
-                    <p class="text-sm break-words">potential estimated damages and lost growth in just ten markets by 2030</p>
+                    <p class="text-sm break-words text-gray-600">potential estimated damages and lost growth in just ten markets by 2030</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-white text-2xl font-bold">💰</span>
+                        </div>
+                    </div>
                     <h3 class="text-2xl font-bold text-blue-600 mb-2 break-words">$4tn</h3>
-                    <p class="text-sm break-words">annual new investment needed to meet the UN Sustainable Development Goals</p>
+                    <p class="text-sm break-words text-gray-600">annual new investment needed to meet the UN Sustainable Development Goals</p>
                 </div>
             </div>
         </div>
@@ -55,156 +117,216 @@
 
     <!-- Three Pillars Section -->
     <section class="py-16 bg-gray-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 break-words">The Three Pillars of Our Approach</h2>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 break-words text-gray-800">The Three Pillars of Our Approach</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f" alt="Responsible Business" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Responsible Business Practices</h3>
-                    <p class="text-sm break-words">We strive to be a responsible business by operationalising our net zero targets, managing our environmental and social risk, acting transparently, and investing in our people.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Find out more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Responsible Business" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Responsible Business Practices</h3>
+                    <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">We strive to be a responsible business by operationalising our net zero targets, managing our environmental and social risk, acting transparently, and investing in our people.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">Find out more →</a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1590283603385-17fa87d3d78e" alt="Sustainable Finance" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Bespoke Sustainable Finance Solutions</h3>
-                    <p class="text-sm break-words">We leverage our deep expertise and innovative product suite to offer bespoke sustainable finance solutions designed to help our clients address challenges and achieve sustainable growth.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Discover our offering</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg" alt="Sustainable Finance" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Bespoke Sustainable Finance Solutions</h3>
+                    <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">We leverage our deep expertise and innovative product suite to offer bespoke sustainable finance solutions designed to help our clients address challenges and achieve sustainable growth.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">Discover our offering →</a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1527176930608-09cb256ab504" alt="Innovation" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Innovation in Service of Our Markets</h3>
-                    <p class="text-sm break-words">We advocate in service of our markets, applying our innovative mindset to unlock the areas where capital is not flowing at scale or not at all and to drive economic inclusion.</p>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Learn about our work</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg" alt="Innovation" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Innovation in Service of Our Markets</h3>
+                    <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">We advocate in service of our markets, applying our innovative mindset to unlock the areas where capital is not flowing at scale or not at all and to drive economic inclusion.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">Learn about our work →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Case Study Section -->
-    <section class="py-16 bg-blue-50">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 break-words">Working on Real-World Solutions</h2>
-            <p class="text-lg text-center mb-6 break-words">We don’t have all the answers, but we are on the ground in our markets, developing real-world solutions to help our clients navigate complexity and unlock opportunity.</p>
-            <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e" alt="Angola Energy" class="w-full h-64 object-cover rounded-lg mb-4">
-                <h3 class="text-xl font-semibold mb-2 break-words">Case Study: Energy in Angola</h3>
-                <p class="text-sm break-words">Rural electrification is an important part of Angola’s strategy to diversify its energy mix. New solar infrastructure in Angola will help provide electricity from 100% renewable energy sources to a million people who were previously not connected to the national grid.</p>
-                <a href="#" class="text-blue-600 hover:underline break-words">Let’s talk about energy in Angola</a>
+    <section class="py-16 bg-blue-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 right-20 w-40 h-40 bg-green-200 rounded-full"></div>
+            <div class="absolute bottom-20 left-20 w-32 h-32 bg-blue-300 rounded-full"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 break-words text-gray-800">Working on Real-World Solutions</h2>
+            <p class="text-lg text-center mb-6 break-words max-w-4xl mx-auto text-gray-700 leading-relaxed">We don't have all the answers, but we are on the ground in our markets, developing real-world solutions to help our clients navigate complexity and unlock opportunity.</p>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="overflow-hidden rounded-lg mb-6">
+                    <img src="https://images.pexels.com/photos/2850290/pexels-photo-2850290.jpeg" alt="Angola Energy" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
+                </div>
+                <h3 class="text-2xl font-semibold mb-4 break-words text-gray-800">Case Study: Energy in Angola</h3>
+                <p class="text-sm break-words text-gray-600 mb-6 leading-relaxed">Rural electrification is an important part of Angola's strategy to diversify its energy mix. New solar infrastructure in Angola will help provide electricity from 100% renewable energy sources to a million people who were previously not connected to the national grid.</p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium text-lg">Let's talk about energy in Angola →</a>
             </div>
         </div>
     </section>
 
     <!-- Sustainability News Section -->
     <section class="py-16 bg-gray-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 break-words">Latest Sustainability News and Insights</h2>
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 break-words text-gray-800">Latest Sustainability News and Insights</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Transition Plan" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Our First Transition Plan</h3>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Read more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg" alt="Transition Plan" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Our First Transition Plan</h3>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">Read more →</a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Impact Report" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Our Latest Impact Report</h3>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Read more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg" alt="Impact Report" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Our Latest Impact Report</h3>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">Read more →</a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1509043759401-136742328bb8" alt="Carbon Capture" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Financing Carbon Capture</h3>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Read more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Carbon Capture" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Financing Carbon Capture</h3>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">Read more →</a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Ocean Capital" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Channelling Capital to the Ocean</h3>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Read more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg" alt="Ocean Capital" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Channelling Capital to the Ocean</h3>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">Read more →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sustainability Stands Section -->
-    <section class="py-16 bg-blue-50">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 break-words">We’re Taking a Stand</h2>
-            <p class="text-lg text-center mb-6 break-words">The execution of our sustainability strategy helps us deliver against our Stands. These give us a framework for positive action across our footprint.</p>
+    <section class="py-16 bg-blue-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 right-20 w-40 h-40 bg-green-200 rounded-full"></div>
+            <div class="absolute bottom-20 left-20 w-32 h-32 bg-blue-300 rounded-full"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 break-words text-gray-800">We're Taking a Stand</h2>
+            <p class="text-lg text-center mb-6 break-words max-w-4xl mx-auto text-gray-700 leading-relaxed">The execution of our sustainability strategy helps us deliver against our Stands. These give us a framework for positive action across our footprint.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e" alt="Accelerating Zero" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Accelerating Zero</h3>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Learn more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pexels.com/photos/2850290/pexels-photo-2850290.jpeg" alt="Accelerating Zero" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Accelerating Zero</h3>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">Learn more →</a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1589301771116-8a625d4ae700" alt="Resetting Globalisation" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Resetting Globalisation</h3>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Learn more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg" alt="Resetting Globalisation" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Resetting Globalisation</h3>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">Learn more →</a>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" alt="Lifting Participation" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 break-words">Lifting Participation</h3>
-                    <a href="#" class="text-blue-600 hover:underline break-words">Learn more</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Lifting Participation" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Lifting Participation</h3>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-300 font-medium">Learn more →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Reporting Section -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12 break-words">Reporting Our Impact and Progress</h2>
-            <p class="text-lg mb-6 break-words">View our key impact and sustainability reports, including our latest climate change disclosures.</p>
-            <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 break-words">Explore our sustainability library</a>
+    <section class="py-16 bg-gray-100 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-green-200 rounded-full animate-pulse"></div>
+            <div class="absolute bottom-10 right-10 w-24 h-24 bg-blue-300 rounded-full animate-pulse animation-delay-1000"></div>
+        </div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 break-words text-gray-800">Reporting Our Impact and Progress</h2>
+            <p class="text-lg mb-6 break-words max-w-4xl mx-auto text-gray-700 leading-relaxed">View our key impact and sustainability reports, including our latest climate change disclosures.</p>
+            <a href="#" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 break-words transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-block">Explore our sustainability library</a>
         </div>
     </section>
 
     <!-- Commitment Statement -->
-    <section class="py-16 bg-blue-50">
-        <div class="container mx-auto text-center">
-            <p class="text-lg break-words">Bank of Trust has an important role to play in supporting our clients, sectors, and markets to deliver net zero, but to do so in a manner that supports livelihoods and promotes sustainable economic growth. We currently provide financial services to clients, sectors, and markets that contribute to greenhouse gas emissions; however, we’re committed to net zero in our own operations by 2025 and in our financed emissions by 2050.</p>
+    <section class="py-16 bg-blue-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 right-20 w-40 h-40 bg-green-200 rounded-full"></div>
+            <div class="absolute bottom-20 left-20 w-32 h-32 bg-blue-300 rounded-full"></div>
+        </div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-xl border-l-4 border-green-500">
+                <div class="mb-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-3xl">🌍</span>
+                    </div>
+                </div>
+                <p class="text-lg break-words text-gray-700 leading-relaxed">Calay Banking has an important role to play in supporting our clients, sectors, and markets to deliver net zero, but to do so in a manner that supports livelihoods and promotes sustainable economic growth. We currently provide financial services to clients, sectors, and markets that contribute to greenhouse gas emissions; however, we're committed to net zero in our own operations by 2025 and in our financed emissions by 2050.</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-900 text-white p-6">
-        <div class="container mx-auto">
+    <footer class="bg-blue-900 text-white p-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-blue-700 rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-24 h-24 bg-blue-800 rounded-full"></div>
+        </div>
+        <div class="container mx-auto relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 break-words">Bank of Trust</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-blue-300 break-words">Accessibility</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Cookie Policy</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Terms of Use</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Modern Slavery Statement</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Regulatory Disclosures</a></li>
+                    <h3 class="text-lg font-semibold mb-4 break-words">Calay Banking</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Accessibility</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Modern Slavery Statement</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Regulatory Disclosures</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4 break-words">Support</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-blue-300 break-words">Online Security</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Fighting Financial Crime</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Our Suppliers</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">FAQs</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Our Locations</a></li>
-                        <li><a href="join.html" class="hover:text-blue-300 break-words">Contact Us</a></li>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Online Security</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Fighting Financial Crime</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Our Suppliers</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">FAQs</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Our Locations</a></li>
+                        <li><a href="join.html" class="hover:text-blue-300 break-words transition-colors duration-300">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4 break-words">Connect With Us</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-blue-300 break-words">Facebook</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Instagram</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Twitter</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">LinkedIn</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">YouTube</a></li>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Facebook</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Instagram</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Twitter</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">YouTube</a></li>
                     </ul>
                 </div>
             </div>
-            <p class="text-center mt-8 break-words">© Bank of Trust 2004. All Rights Reserved.</p>
+            <p class="text-center mt-8 break-words text-blue-200">© Calay Banking 2004. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

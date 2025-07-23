@@ -3,228 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank of Trust - Services</title>
+    <title>Calay Banking - Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="font-sans bg-cover bg-center bg-no-repeat services-bg">
+<body class="font-sans">
     <!-- Navigation -->
-    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-10">
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">Bank of Trust</a>
-            <div class="space-x-4">
-                <a href="#" class="hover:text-blue-300">Personal</a>
-                <a href="#" class="hover:text-blue-300">Small Business</a>
-                <a href="#" class="hover:text-blue-300">Commercial</a>
-                <a href="offshore.html" class="hover:text-blue-300">Investing & Wealth</a>
-                <a href="about.html" class="hover:text-blue-300">About Us</a>
-                <a href="#" class="hover:text-blue-300">Find Us</a>
-                <a href="#" class="hover:text-blue-300">Help</a>
-                <a href="#" class="hover:text-blue-300">Search</a>
-                <a href="login.html" class="hover:text-blue-300">Log In</a>
+            <a href="index.html" class="text-2xl font-bold hover:text-blue-300 transition-colors duration-300">Calay Banking</a>
+            <div class="md:flex md:space-x-6 hidden md:block">
+                <a href="index.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Home
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="services.html" class="hover:text-blue-300 transition-colors duration-300 relative group text-blue-300">
+                    Services
+                    <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-300"></span>
+                </a>
+                <a href="offshore.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Offshore Banking
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="about.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    About
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="join.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Join Us
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="login.html" class="hover:text-blue-300 transition-colors duration-300 relative group">
+                    Login
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="menuToggle" class="text-2xl focus:outline-none hover:text-blue-300 transition-colors duration-300">☰</button>
+            </div>
+            <div id="mobileMenu" class="md:hidden absolute top-16 right-4 bg-blue-900 p-4 space-y-2 rounded-lg shadow-xl transition-all duration-300 hidden">
+                <a href="index.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Home</a>
+                <a href="services.html" class="block hover:text-blue-300 transition-colors duration-300 py-2 text-blue-300">Services</a>
+                <a href="offshore.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Offshore Banking</a>
+                <a href="about.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">About</a>
+                <a href="join.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Join Us</a>
+                <a href="login.html" class="block hover:text-blue-300 transition-colors duration-300 py-2">Login</a>
             </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <section class="services-bg-hero h-96 flex items-center justify-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-800/70"></div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-8 break-words animate-fade-in-up">Calay Banking: Your Most Convenient Offshore Bank</h1>
+            <p class="text-xl mb-6 break-words animate-fade-in-up animation-delay-200">Comprehensive foreign exchange services for all your international needs</p>
+        </div>
+    </section>
+
     <!-- Services Section -->
-    <section class="py-16 bg-black bg-opacity-50">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h1 class="text-4xl font-bold text-white mb-8 break-words animate-fade-in">Bank of Trust:Your Most Convenient Offshore Bank</h1>
+    <section class="py-16 bg-blue-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-24 h-24 bg-blue-300 rounded-full"></div>
+            <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-blue-100 rounded-full"></div>
+        </div>
+        <div class="container mx-auto max-w-4xl relative z-10 px-4">
             
             <!-- Foreign Exchange Services -->
-            <div class="bg-white p-6 rounded-lg shadow-lg mb-12 animate-fade-in">
-                <h2 class="text-3xl font-bold mb-6 break-words">Foreign Exchange Services</h2>
-                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3" alt="Foreign Currency" class="w-full h-64 object-cover rounded-lg mb-6 mx-auto">
-                <p class="text-lg mb-6 break-words">Whether you're traveling or need to send or receive money internationally, we've got you covered with competitive exchange rates.</p>
-                <div class="flex justify-center space-x-4">
-                    <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 hover:scale-105 transition-transform duration-200 break-words">Order online</a>
-                    <a href="#" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 hover:scale-105 transition-transform duration-200 break-words">Book an appointment at a Bank of Trust near you</a>
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-12 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-6 break-words text-gray-800">Foreign Exchange Services</h2>
+                <div class="overflow-hidden rounded-lg mb-6">
+                    <img src="https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg" alt="Foreign Currency" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 hover:scale-105">
+                </div>
+                <p class="text-lg mb-6 break-words text-gray-700 leading-relaxed">Whether you're traveling or need to send or receive money internationally, we've got you covered with competitive exchange rates.</p>
+                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                    <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300 hover:shadow-lg break-words text-center">Order online</a>
+                    <a href="#" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 hover:scale-105 transition-all duration-300 hover:shadow-lg break-words text-center">Book an appointment at a Bank of Trust near you</a>
                 </div>
             </div>
 
             <!-- Foreign Currency Exchange -->
-            <div class="bg-white p-6 rounded-lg shadow-lg mb-12 animate-fade-in">
-                <h2 class="text-3xl font-bold mb-6 break-words">Foreign Currency Exchange</h2>
-                <img src="https://images.unsplash.com/photo-1556740714-7a6a5a2d6c8b" alt="Currency Exchange" class="w-full h-64 object-cover rounded-lg mb-6 mx-auto">
-                <p class="text-sm mb-4 break-words">Avoid potentially costly exchange rates and fees while traveling. With Bank of Trust, you can:</p>
-                <ul class="list-disc list-inside text-sm mb-4 break-words mx-auto max-w-2xl">
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-12 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-6 break-words text-gray-800">Foreign Currency Exchange</h2>
+                <div class="overflow-hidden rounded-lg mb-6">
+                    <img src="https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg" alt="Currency Exchange" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 hover:scale-105">
+                </div>
+                <p class="text-sm mb-4 break-words text-gray-700 leading-relaxed">Avoid potentially costly exchange rates and fees while traveling. With Calay Banking, you can:</p>
+                <ul class="list-disc list-inside text-sm mb-6 break-words mx-auto max-w-2xl text-gray-700 space-y-2">
                     <li>Order 55+ foreign currencies online or in person at any Bank of Trust location and pick up within 2–3 business days<sup>1</sup></li>
                     <li>Exchange foreign currency for U.S. dollars when you return from your trip, or if you're a visitor to the U.S.<sup>2</sup></li>
                 </ul>
-                <a href="#" class="text-blue-600 hover:underline hover:scale-105 transition-transform duration-200 break-words">Order online</a>
+                <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline hover:scale-105 transition-all duration-300 break-words font-medium">Order online →</a>
             </div>
 
             <!-- Same-day Currency Exchange -->
-            <div class="bg-white p-6 rounded-lg shadow-lg mb-12 animate-fade-in">
-                <h2 class="text-3xl font-bold mb-6 break-words">Same-day Currency Exchange</h2>
-                <img src="https://images.unsplash.com/photo-1593672715438-d88a70629abe" alt="Same-day Exchange" class="w-full h-64 object-cover rounded-lg mb-6 mx-auto">
-                <p class="text-sm mb-4 break-words">Pick up currency today at select Bank of Trust locations or a Bank of Trust Foreign Exchange Center. Be sure to call ahead to confirm currency availability.</p>
-                <h3 class="text-xl font-semibold mb-4 break-words">Select Bank of Trust Locations</h3>
-                <p class="text-sm mb-4 break-words">Some Bank of Trust locations may have common currencies available for immediate exchange, such as:</p>
-                <ul class="list-disc list-inside text-sm mb-4 break-words mx-auto max-w-2xl">
-                    <li>European euros (EUR)</li>
-                    <li>Great British pounds (GBP)</li>
-                    <li>Canadian dollars (CAD)</li>
-                    <li>Mexican pesos (MXN)</li>
-                    <li>Australian dollars (AUD)</li>
-                    <li>Japanese yen (JPY)</li>
-                    <li>Swiss francs (CHF)</li>
-                </ul>
-                <a href="#" class="text-blue-600 hover:underline hover:scale-105 transition-transform duration-200 break-words">Find a Bank of Trust with currency near you and call ahead to confirm availability</a>
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-12 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-6 break-words text-gray-800">Same-day Currency Exchange</h2>
+                <div class="overflow-hidden rounded-lg mb-6">
+                    <img src="https://images.pexels.com/photos/1602726/pexels-photo-1602726.jpeg" alt="Same-day Exchange" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 hover:scale-105">
+                </div>
+                <p class="text-sm mb-4 break-words text-gray-700 leading-relaxed">Pick up currency today at select Calay Banking locations or a Calay Banking Foreign Exchange Center. Be sure to call ahead to confirm currency availability.</p>
+                <h3 class="text-xl font-semibold mb-4 break-words text-gray-800">Select Calay Banking Locations</h3>
+                <p class="text-sm mb-4 break-words text-gray-700">Some Bank of Trust locations may have common currencies available for immediate exchange, such as:</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <div class="bg-blue-50 p-3 rounded-lg text-center">
+                        <span class="text-sm font-medium text-gray-800">European euros (EUR)</span>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-lg text-center">
+                        <span class="text-sm font-medium text-gray-800">Great British pounds (GBP)</span>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-lg text-center">
+                        <span class="text-sm font-medium text-gray-800">Canadian dollars (CAD)</span>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-lg text-center">
+                        <span class="text-sm font-medium text-gray-800">Mexican pesos (MXN)</span>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-lg text-center">
+                        <span class="text-sm font-medium text-gray-800">Australian dollars (AUD)</span>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-lg text-center">
+                        <span class="text-sm font-medium text-gray-800">Japanese yen (JPY)</span>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-lg text-center">
+                        <span class="text-sm font-medium text-gray-800">Swiss francs (CHF)</span>
+                    </div>
+                </div>
+                <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline hover:scale-105 transition-all duration-300 break-words font-medium">Find a Calay Banking Center with currency near you and call ahead to confirm availability →</a>
             </div>
 
             <!-- Foreign Exchange Centers -->
-            <div class="bg-white p-6 rounded-lg shadow-lg mb-12 animate-fade-in">
-                <h2 class="text-3xl font-bold mb-6 break-words">Bank of Trust Foreign Exchange Centers</h2>
-                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f" alt="Exchange Center" class="w-full h-64 object-cover rounded-lg mb-6 mx-auto">
-                <p class="text-sm mb-4 break-words">Bank of Trust Foreign Exchange Centers are locations that have up to 15 foreign currencies available for immediate exchange. Find a center near you in one of our major metro areas:</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-12 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-6 break-words text-gray-800">Calay Banking Foreign Exchange Centers</h2>
+                <div class="overflow-hidden rounded-lg mb-6">
+                    <img src="https://images.pexels.com/photos/1602726/pexels-photo-1602726.jpeg" alt="Exchange Center" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 hover:scale-105">
+                </div>
+                <p class="text-sm mb-6 break-words text-gray-700 leading-relaxed">Calay Banking Foreign Exchange Centers are locations that have up to 15 foreign currencies available for immediate exchange. Find a center near you in one of our major metro areas:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Boston Area -->
-                    <div>
-                        <h4 class="text-lg font-semibold mb-2 break-words">Boston Area</h4>
-                        <p class="text-sm break-words">24 Winter Street, Boston<br>1-617-426-4591</p>
-                        <p class="text-sm break-words">1270 Massachusetts Avenue, Cambridge<br>1-617-576-8612</p>
-                        <p class="text-sm break-words">61 Main Street, Andover<br>1-978-684-6557</p>
-                        <p class="text-sm break-words">1641 Beacon Street, Brookline<br>1-617-739-2666</p>
-                        <p class="text-sm break-words">1197 Centre Street, Newton Centre<br>1-617-244-0559</p>
-                        <p class="text-sm break-words">323 Hancock Street, North Quincy<br>1-617-249-2218</p>
+                    <div class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                        <h4 class="text-lg font-semibold mb-3 break-words text-gray-800">Boston Area</h4>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p class="break-words">24 Winter Street, Boston<br><span class="text-blue-600">1-617-426-4591</span></p>
+                            <p class="break-words">1270 Massachusetts Avenue, Cambridge<br><span class="text-blue-600">1-617-576-8612</span></p>
+                            <p class="break-words">61 Main Street, Andover<br><span class="text-blue-600">1-978-684-6557</span></p>
+                            <p class="break-words">1641 Beacon Street, Brookline<br><span class="text-blue-600">1-617-739-2666</span></p>
+                            <p class="break-words">1197 Centre Street, Newton Centre<br><span class="text-blue-600">1-617-244-0559</span></p>
+                            <p class="break-words">323 Hancock Street, North Quincy<br><span class="text-blue-600">1-617-249-2218</span></p>
+                        </div>
                     </div>
                     <!-- Charlotte -->
-                    <div>
-                        <h4 class="text-lg font-semibold mb-2 break-words">Charlotte</h4>
-                        <p class="text-sm break-words">345 S Kings Drive<br>1-704-208-2187</p>
+                    <div class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                        <h4 class="text-lg font-semibold mb-3 break-words text-gray-800">Charlotte</h4>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p class="break-words">345 S Kings Drive<br><span class="text-blue-600">1-704-208-2187</span></p>
+                        </div>
                     </div>
                     <!-- New York Area -->
-                    <div>
-                        <h4 class="text-lg font-semibold mb-2 break-words">New York Area</h4>
-                        <p class="text-sm break-words">1290 6th Avenue of the Americas<br>1-212-245-0282</p>
-                        <p class="text-sm break-words">2 Wall Street<br>1-646-344-4800</p>
-                        <p class="text-sm break-words">One Vanderbilt Avenue<br>1-646-822-6757</p>
-                        <p class="text-sm break-words">1040 E Jericho Turnpike, Huntington Station<br>1-613-427-0223</p>
+                    <div class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                        <h4 class="text-lg font-semibold mb-3 break-words text-gray-800">New York Area</h4>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p class="break-words">1290 6th Avenue of the Americas<br><span class="text-blue-600">1-212-245-0282</span></p>
+                            <p class="break-words">2 Wall Street<br><span class="text-blue-600">1-646-344-4800</span></p>
+                            <p class="break-words">One Vanderbilt Avenue<br><span class="text-blue-600">1-646-822-6757</span></p>
+                            <p class="break-words">1040 E Jericho Turnpike, Huntington Station<br><span class="text-blue-600">1-613-427-0223</span></p>
+                        </div>
                     </div>
                     <!-- New Jersey -->
-                    <div>
-                        <h4 class="text-lg font-semibold mb-2 break-words">New Jersey</h4>
-                        <p class="text-sm break-words">1400 Palisade Avenue, Fort Lee<br>1-201-947-8938</p>
-                        <p class="text-sm break-words">47 Newark Street, Hoboken<br>1-201-239-8074</p>
-                        <p class="text-sm break-words">465 South Avenue', 'text-sm break-words">465 South Avenue E, Cranford<br>1-908-653-1059</p>
-                        <p class="text-sm break-words">1906 Lincoln Highway, Edison<br>1-732-572-9004</p>
-                        <p class="text-sm break-words">500 Shrewsbury Avenue, Tinton Falls<br>1-732-212-6900</p>
+                    <div class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                        <h4 class="text-lg font-semibold mb-3 break-words text-gray-800">New Jersey</h4>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p class="break-words">1400 Palisade Avenue, Fort Lee<br><span class="text-blue-600">1-201-947-8938</span></p>
+                            <p class="break-words">47 Newark Street, Hoboken<br><span class="text-blue-600">1-201-239-8074</span></p>
+                            <p class="break-words">465 South Avenue E, Cranford<br><span class="text-blue-600">1-908-653-1059</span></p>
+                            <p class="break-words">1906 Lincoln Highway, Edison<br><span class="text-blue-600">1-732-572-9004</span></p>
+                            <p class="break-words">500 Shrewsbury Avenue, Tinton Falls<br><span class="text-blue-600">1-732-212-6900</span></p>
+                        </div>
                     </div>
                     <!-- Philadelphia -->
-                    <div>
-                        <h4 class="text-lg font-semibold mb-2 break-words">Philadelphia</h4>
-                        <p class="text-sm break-words">1726 Walnut Street<br>1-215-546-1655</p>
+                    <div class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                        <h4 class="text-lg font-semibold mb-3 break-words text-gray-800">Philadelphia</h4>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p class="break-words">1726 Walnut Street<br><span class="text-blue-600">1-215-546-1655</span></p>
+                        </div>
                     </div>
                     <!-- Vermont -->
-                    <div>
-                        <h4 class="text-lg font-semibold mb-2 break-words">Vermont</h4>
-                        <p class="text-sm break-words">111 Main Street, Burlington<br>1-802-658-1010</p>
-                        <p class="text-sm break-words">186 Cambridge Street, Burlington<br>1-781-272-0237</p>
+                    <div class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                        <h4 class="text-lg font-semibold mb-3 break-words text-gray-800">Vermont</h4>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p class="break-words">111 Main Street, Burlington<br><span class="text-blue-600">1-802-658-1010</span></p>
+                            <p class="break-words">186 Cambridge Street, Burlington<br><span class="text-blue-600">1-781-272-0237</span></p>
+                        </div>
                     </div>
                     <!-- Florida -->
-                    <div>
-                        <h4 class="text-lg font-semibold mb-2 break-words">Florida</h4>
-                        <p class="text-sm break-words">1215 SE 17th Street, Fort Lauderdale<br>1-954-356-9357</p>
-                        <p class="text-sm break-words">1626 E Hallandale Beach Boulevard<br>1-954-456-7734</p>
+                    <div class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                        <h4 class="text-lg font-semibold mb-3 break-words text-gray-800">Florida</h4>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p class="break-words">1215 SE 17th Street, Fort Lauderdale<br><span class="text-blue-600">1-954-356-9357</span></p>
+                            <p class="break-words">1626 E Hallandale Beach Boulevard<br><span class="text-blue-600">1-954-456-7734</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Additional Products -->
-            <div class="bg-white p-6 rounded-lg shadow-lg mb-12 animate-fade-in">
-                <h2 class="text-3xl font-bold mb-6 break-words">Explore More Bank of Trust Products and Services</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-12 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-6 break-words text-gray-800">Explore More Calay Banking Products and Services</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-gray-100 p-4 rounded-lg hover:shadow-xl transition-shadow duration-200">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="International Travel Tips" class="w-full h-48 object-cover rounded-lg mb-4 mx-auto">
-                        <h3 class="text-xl font-semibold mb-2 break-words">International Travel Tips</h3>
-                        <p class="text-sm break-words">Prepare for travel with tips on what to do before you leave, plus info on using cash and credit cards.</p>
-                        <a href="#" class="text-blue-600 hover:underline hover:scale-105 transition-transform duration-200 break-words">Learn more</a>
+                    <div class="bg-gray-100 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg" alt="International Travel Tips" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">International Travel Tips</h3>
+                        <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">Prepare for travel with tips on what to do before you leave, plus info on using cash and credit cards.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline hover:scale-105 transition-all duration-300 break-words font-medium">Learn more →</a>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg hover:shadow-xl transition-shadow duration-200">
-                        <img src="https://images.unsplash.com/photo-1560523159-4a9692ac89b0" alt="Commercial Foreign Exchange" class="w-full h-48 object-cover rounded-lg mb-4 mx-auto">
-                        <h3 class="text-xl font-semibold mb-2 break-words">Commercial Foreign Exchange</h3>
-                        <p class="text-sm break-words">Get a range of Foreign Exchange (FX) solutions tailored to your global business needs.</p>
-                        <a href="#" class="text-blue-600 hover:underline hover:scale-105 transition-transform duration-200 break-words">Get details</a>
+                    <div class="bg-gray-100 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Commercial Foreign Exchange" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Commercial Foreign Exchange</h3>
+                        <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">Get a range of Foreign Exchange (FX) solutions tailored to your global business needs.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline hover:scale-105 transition-all duration-300 break-words font-medium">Get details →</a>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg hover:shadow-xl transition-shadow duration-200">
-                        <img src="https://images.unsplash.com/photo-1589301771116-8a625d4ae700" alt="Cross-Border Banking" class="w-full h-48 object-cover rounded-lg mb-4 mx-auto">
-                        <h3 class="text-xl font-semibold mb-2 break-words">Cross-Border Banking</h3>
-                        <p class="text-sm break-words">Bank of Trust offers a variety of cross-border banking services, whether you live in the U.S. part-time, or visit for shopping or travel.</p>
-                        <a href="#" class="text-blue-600 hover:underline hover:scale-105 transition-transform duration-200 break-words">Get details</a>
+                    <div class="bg-gray-100 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg" alt="Cross-Border Banking" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 break-words text-gray-800">Cross-Border Banking</h3>
+                        <p class="text-sm break-words text-gray-600 mb-4 leading-relaxed">Calay Banking offers a variety of cross-border banking services, whether you live in the U.S. part-time, or visit for shopping or travel.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline hover:scale-105 transition-all duration-300 break-words font-medium">Get details →</a>
                     </div>
                 </div>
             </div>
 
             <!-- Order and Exchange -->
-            <div class="bg-white p-6 rounded-lg shadow-lg mb-12 animate-fade-in">
-                <h2 class="text-3xl font-bold mb-6 break-words">Order and Exchange Currency</h2>
-                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3" alt="Order and Exchange" class="w-full h-64 object-cover rounded-lg mb-6 mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 break-words">Online</h3>
-                        <p class="text-sm break-words">Order your foreign currency for pickup at a Bank of Trust near you.</p>
-                        <a href="#" class="text-blue-600 hover:underline hover:scale-105 transition-transform duration-200 break-words">Order now</a>
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-12 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-6 break-words text-gray-800">Order and Exchange Currency</h2>
+                <div class="overflow-hidden rounded-lg mb-6">
+                    <img src="https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg" alt="Order and Exchange" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 hover:scale-105">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-blue-50 p-6 rounded-lg hover:bg-blue-100 transition-colors duration-300">
+                        <h3 class="text-xl font-semibold mb-3 break-words text-gray-800">Online</h3>
+                        <p class="text-sm break-words text-gray-700 mb-4 leading-relaxed">Order your foreign currency for pickup at a Calay Banking branch near you.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline hover:scale-105 transition-all duration-300 break-words font-medium">Order now →</a>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 break-words">In Person</h3>
-                        <p class="text-sm break-words">Book an appointment to order and exchange currency at a Bank of Trust near you.</p>
-                        <a href="#" class="text-blue-600 hover:underline hover:scale-105 transition-transform duration-200 break-words">Find a Bank of Trust</a>
+                    <div class="bg-blue-50 p-6 rounded-lg hover:bg-blue-100 transition-colors duration-300">
+                        <h3 class="text-xl font-semibold mb-3 break-words text-gray-800">In Person</h3>
+                        <p class="text-sm break-words text-gray-700 mb-4 leading-relaxed">Book an appointment to order and exchange currency at a Calay Banking branch near you.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline hover:scale-105 transition-all duration-300 break-words font-medium">Find a Bank of Trust →</a>
                     </div>
                 </div>
             </div>
 
             <!-- Notes -->
-            <div class="text-white text-sm text-center break-words">
-                <p><sup>1</sup>Some currencies may take longer than 2–3 days.</p>
-                <p><sup>2</sup>Foreign banknotes only, coins cannot be accepted for exchange.</p>
-                <p class="mt-2">Foreign Exchange (FX) products and services are provided by Bank of Trust, N.A.'s affiliate, The Bank of Trust.</p>
+            <div class="bg-gray-800 p-6 rounded-lg text-white text-sm text-center break-words">
+                <p class="mb-2"><sup>1</sup>Some currencies may take longer than 2–3 days.</p>
+                <p class="mb-4"><sup>2</sup>Foreign banknotes only, coins cannot be accepted for exchange.</p>
+                <p class="text-gray-300">Foreign Exchange (FX) products and services are provided by Bank of Trust, N.A.'s affiliate, The Bank of Trust.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-900 text-white p-6">
-        <div class="container mx-auto max-w-4xl text-center">
+    <footer class="bg-blue-900 text-white p-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-blue-700 rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-24 h-24 bg-blue-800 rounded-full"></div>
+        </div>
+        <div class="container mx-auto max-w-4xl text-center relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 break-words">Bank of Trust</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-blue-300 break-words">Privacy</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">California Privacy</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Online Advertising</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Terms of Use</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Security</a></li>
-                        <li><a href="about.html" class="hover:text-blue-300 break-words">About Us</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Accessibility</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Careers</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Site Map</a></li>
+                    <h3 class="text-lg font-semibold mb-4 break-words">Calay Banking</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Privacy</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">California Privacy</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Online Advertising</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Security</a></li>
+                        <li><a href="about.html" class="hover:text-blue-300 break-words transition-colors duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Accessibility</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Careers</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Site Map</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4 break-words">Contact Us</h3>
-                    <p class="text-sm break-words">Need to talk to us directly? <a href="join.html" class="text-blue-300 hover:underline">Contact us</a></p>
-                    <p class="text-sm break-words mt-4">Bank of Trust Atrium - Corporate Office<br>1701 Route 70 East, Cherry Hill, NJ 08003</p>
+                    <p class="text-sm break-words mb-4">Need to talk to us directly? <a href="join.html" class="text-blue-300 hover:text-blue-100 hover:underline transition-colors duration-300">Contact us</a></p>
+                    <p class="text-sm break-words text-blue-200">Calay Banking Atrium - Corporate Office<br>1701 Route 70 East, Cherry Hill, NJ 08003</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4 break-words">Connect With Us</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-blue-300 break-words">Facebook</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Instagram</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">Twitter</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">LinkedIn</a></li>
-                        <li><a href="#" class="hover:text-blue-300 break-words">YouTube</a></li>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Facebook</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Instagram</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">Twitter</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-blue-300 break-words transition-colors duration-300">YouTube</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-8">
-                <p class="text-sm break-words">Equal Housing Lender<br>Member FDIC. Bank Deposits FDIC Insured</p>
-                <p class="text-sm break-words mt-2">SECURITIES AND OTHER INVESTMENT AND INSURANCE PRODUCTS ARE: NOT A DEPOSIT; NOT FDIC INSURED; NOT INSURED BY ANY FEDERAL GOVERNMENT AGENCY; NOT GUARANTEED BY BANK OF TRUST, N.A. OR ANY OF ITS AFFILIATES; AND, MAY BE SUBJECT TO INVESTMENT RISK, INCLUDING POSSIBLE LOSS OF VALUE.</p>
-                <p class="text-sm break-words mt-4">©2004 Bank of Trust, N.A. All Rights Reserved.</p>
+            <div class="border-t border-blue-800 mt-8 pt-8">
+                <p class="text-sm break-words text-blue-200 mb-2">Equal Housing Lender<br>Member FDIC. Bank Deposits FDIC Insured</p>
+                <p class="text-sm break-words text-blue-200 mb-4">SECURITIES AND OTHER INVESTMENT AND INSURANCE PRODUCTS ARE: NOT A DEPOSIT; NOT FDIC INSURED; NOT INSURED BY ANY FEDERAL GOVERNMENT AGENCY; NOT GUARANTEED BY BANK OF TRUST, N.A. OR ANY OF ITS AFFILIATES; AND, MAY BE SUBJECT TO INVESTMENT RISK, INCLUDING POSSIBLE LOSS OF VALUE.</p>
+                <p class="text-sm break-words text-blue-200">©2004 Calay Banking, N.A. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

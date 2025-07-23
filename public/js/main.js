@@ -120,11 +120,31 @@ function setupEventListeners() {
     // Mobile menu toggle
     const menuToggle = document.getElementById('menuToggle');
     const sidebar = document.getElementById('sidebar');
+    const body = document.body;
 
     if (menuToggle && sidebar) {
         menuToggle.addEventListener('click', function() {
             sidebar.classList.toggle('-translate-x-full');
             sidebar.classList.toggle('translate-x-0');
+            
+            // Prevent body scroll when sidebar is open on mobile
+            if (sidebar.classList.contains('translate-x-0')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
+        });
+        
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth < 1024 && 
+                !sidebar.contains(e.target) && 
+                !menuToggle.contains(e.target) &&
+                sidebar.classList.contains('translate-x-0')) {
+                sidebar.classList.add('-translate-x-full');
+                sidebar.classList.remove('translate-x-0');
+                body.style.overflow = '';
+            }
         });
     }
 
